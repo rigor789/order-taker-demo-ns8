@@ -1,4 +1,11 @@
 /*
+In many cases you may want to use the NativeScript core theme instead
+of writing your own CSS rules. For a full list of class names in the theme
+refer to http://docs.nativescript.org/ui/theme.
+*/
+@import 'nativescript-theme-core/css/core.css';
+
+/*
 In NativeScript, the app.css file is where you place CSS rules that
 you would like to apply to your entire application. Check out
 http://docs.nativescript.org/ui/styling for a full list of the CSS
@@ -8,6 +15,7 @@ selectors and properties you can use to style UI components.
 For example, the following CSS rule changes the font size of all UI
 components that have the btn class name.
 */
+
 .btn {
     font-size: 18;
 }
@@ -39,9 +47,3 @@ ListView {
     separator-color: transparent;
 }
 
-/*
-In many cases you may want to use the NativeScript core theme instead
-of writing your own CSS rules. For a full list of class names in the theme
-refer to http://docs.nativescript.org/ui/theme.
-*/
-@import '~nativescript-theme-core/css/core.light.css';

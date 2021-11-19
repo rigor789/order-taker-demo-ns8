@@ -1,6 +1,5 @@
 import { NgModule, NgModuleFactoryLoader, NO_ERRORS_SCHEMA } from "@angular/core";
-import { NativeScriptModule } from "nativescript-angular/nativescript.module";
-import { NativeScriptFormsModule } from "nativescript-angular/forms";
+import { NativeScriptModule, NativeScriptFormsModule } from "@nativescript/angular";
 import { ReactiveFormsModule } from "@angular/forms";
 
 import { AppRoutingModule, navigatableComponents } from "./app-routing.module";

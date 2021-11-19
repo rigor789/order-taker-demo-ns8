@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { Routes } from "@angular/router";
-import { NativeScriptRouterModule } from "nativescript-angular/router";
+import { NativeScriptRouterModule } from "@nativescript/angular";
 import { OrderListComponent } from "./order-list/order-list.component";
 import { OrderDetailComponent } from "./order-detail/order-detail.component";
 import { HomeComponent } from "./home/home.component";

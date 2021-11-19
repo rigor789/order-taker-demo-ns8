@@ -1,0 +1,54 @@
+{
+	"@nativescript/core": {
+		"C:\\Users\\rigor789\\Downloads\\kinvey-demo\\node_modules\\@nativescript\\core\\platforms\\android\\native-api-usage.json": "0cd032a77062661af174380f5a8f8ad8c8a32687",
+		"C:\\Users\\rigor789\\Downloads\\kinvey-demo\\node_modules\\@nativescript\\core\\platforms\\android\\widgets-release.aar": "69e62c559648a2a4ce29efe01b2d5daec4ea794d"
+	},
+	"nativescript-background-http": {
+		"C:\\Users\\rigor789\\Downloads\\kinvey-demo\\node_modules\\nativescript-background-http\\platforms\\android\\uploadservice-release.aar": "964ff477accc1151034191c5a928d19d7d390432"
+	},
+	"nativescript-camera": {
+		"C:\\Users\\rigor789\\Downloads\\kinvey-demo\\node_modules\\nativescript-camera\\platforms\\android\\nativescript_camera.aar": "076643dd1be5b20235184a9c65703fa02a930b9b"
+	},
+	"nativescript-geolocation": {
+		"C:\\Users\\rigor789\\Downloads\\kinvey-demo\\node_modules\\nativescript-geolocation\\platforms\\android\\include.gradle": "a9ad7f439204a251541921d75e1f75ae6dd832c2",
+		"C:\\Users\\rigor789\\Downloads\\kinvey-demo\\node_modules\\nativescript-geolocation\\platforms\\android\\nativescript_geolocation.aar": "b2ab9086897001b3f93ebe3d0b65dbafc010807c"
+	},
+	"nativescript-image": {
+		"C:\\Users\\rigor789\\Downloads\\kinvey-demo\\node_modules\\nativescript-image\\platforms\\android\\include.gradle": "4f5225b5479705d578305ca8f60324e2ba65e755",
+		"C:\\Users\\rigor789\\Downloads\\kinvey-demo\\node_modules\\nativescript-image\\platforms\\android\\java\\com\\nativescript\\image\\BaseDataSubscriber.java": "50937d6824cfbeda7002d86b8a9d821ef4a97de2",
+		"C:\\Users\\rigor789\\Downloads\\kinvey-demo\\node_modules\\nativescript-image\\platforms\\android\\java\\com\\nativescript\\image\\BaseDataSubscriberListener.java": "63048861604b0f018946621abcd2ee149c0e6d5b",
+		"C:\\Users\\rigor789\\Downloads\\kinvey-demo\\node_modules\\nativescript-image\\platforms\\android\\java\\com\\nativescript\\image\\ScalingBlurPostprocessor.java": "f9a3ed48d3875a1aae99528aeaa9ba8cc22744d5",
+		"C:\\Users\\rigor789\\Downloads\\kinvey-demo\\node_modules\\nativescript-image\\platforms\\android\\nativescript_image.aar": "f84e6124782e495dc0a98dfb84a0994ad9653d65"
+	},
+	"nativescript-imagepicker": {
+		"C:\\Users\\rigor789\\Downloads\\kinvey-demo\\node_modules\\nativescript-imagepicker\\platforms\\android\\nativescript_imagepicker.aar": "90efff56ef584bda767622569467189cf5c1f236",
+		"C:\\Users\\rigor789\\Downloads\\kinvey-demo\\node_modules\\nativescript-imagepicker\\platforms\\android\\README.md": "45f2f63427be0a461a7e2dfd5ff0ad5bab64068f"
+	},
+	"nativescript-social-share": {
+		"C:\\Users\\rigor789\\Downloads\\kinvey-demo\\node_modules\\nativescript-social-share\\platforms\\android\\nativescript_social_share.aar": "c9ddf88be057f8d89b2c5abe0525c8cf61ba8ea1"
+	},
+	"nativescript-ui-autocomplete": {
+		"C:\\Users\\rigor789\\Downloads\\kinvey-demo\\node_modules\\nativescript-ui-autocomplete\\platforms\\android\\TNSAutoComplete-release.aar": "24951ca4fcc5231a1a64801a5b0af28b4a51da40"
+	},
+	"nativescript-ui-calendar": {
+		"C:\\Users\\rigor789\\Downloads\\kinvey-demo\\node_modules\\nativescript-ui-calendar\\platforms\\android\\TNSCalendar-release.aar": "c6fc2f02108dbfa496b7e11c059eb07bfcf8a002"
+	},
+	"nativescript-ui-chart": {
+		"C:\\Users\\rigor789\\Downloads\\kinvey-demo\\node_modules\\nativescript-ui-chart\\platforms\\android\\TNSChart-release.aar": "279d4a833fb936b464f0cad81174cf413bcd3627"
+	},
+	"nativescript-ui-dataform": {
+		"C:\\Users\\rigor789\\Downloads\\kinvey-demo\\node_modules\\nativescript-ui-dataform\\platforms\\android\\TNSDataForm-release.aar": "6ecd31c76e1344a841d91bae5bb875008d007491"
+	},
+	"nativescript-ui-gauge": {
+		"C:\\Users\\rigor789\\Downloads\\kinvey-demo\\node_modules\\nativescript-ui-gauge\\platforms\\android\\TNSGauge-release.aar": "4c9a12883ed08b199e349694b30c8b9da41eeed8"
+	},
+	"nativescript-ui-listview": {
+		"C:\\Users\\rigor789\\Downloads\\kinvey-demo\\node_modules\\nativescript-ui-listview\\platforms\\android\\TNSListView-release.aar": "4d3b9968bbfc0a914bd39bde3655c3dd8a87fbaf"
+	},
+	"nativescript-ui-sidedrawer": {
+		"C:\\Users\\rigor789\\Downloads\\kinvey-demo\\node_modules\\nativescript-ui-sidedrawer\\platforms\\android\\TNSSideDrawer-release.aar": "601190cbc04b24f7d68a0212c45bb1b9bc97708a"
+	},
+	"nativescript-ui-core": {
+		"C:\\Users\\rigor789\\Downloads\\kinvey-demo\\node_modules\\nativescript-ui-core\\platforms\\android\\TNSCore-release.aar": "b0a7669a71f361505f1a91a9ebc1b9cf64213f79"
+	}
+}

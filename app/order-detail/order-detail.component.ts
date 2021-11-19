@@ -1,13 +1,8 @@
 import { ActivatedRoute } from "@angular/router";
 import { Component, OnInit, ViewChild, ElementRef, } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { Page } from "ui/page";
-import { screen, isIOS } from "platform";
-import * as utils from "utils/utils";
-import * as frame from "ui/frame";
-import { PanGestureEventData } from "ui/gestures";
-import { StackLayout } from "ui/layouts/stack-layout";
-import { RouterExtensions } from "nativescript-angular/router";
+import { Page, Screen, isIOS, Utils, Frame, PanGestureEventData, StackLayout } from "@nativescript/core";
+import { RouterExtensions } from "@nativescript/angular";
 
 import { ContactService, Contact } from "./../services/contact.service";
 import { OrderService, Order, Item, ItemDetailType } from "./../services/order.service";
@@ -29,8 +24,8 @@ export class OrderDetailComponent implements OnInit {
 	persons: Contact[];
 	orderTaker: number = 0;
 	currentDetailType: ItemDetailType = 'profile';
-	halfScreenHeight = (screen.mainScreen.heightDIPs / 2) - 100;
-	halfScreenWidth = (screen.mainScreen.widthDIPs / 2) - 40;
+	halfScreenHeight = (Screen.mainScreen.heightDIPs / 2) - 100;
+	halfScreenWidth = (Screen.mainScreen.widthDIPs / 2) - 40;
 	prevDeltaX: number = 0;
 	defaultPersonX: 0;
 
@@ -56,7 +51,9 @@ export class OrderDetailComponent implements OnInit {
 	}
 
 	ngOnInit(): void {
-		this.container.nativeElement.translateY = this.halfScreenHeight;
+		setTimeout(() => {
+			this.container.nativeElement.translateY = this.halfScreenHeight;
+		}, 1000)
 	}
 
 	setDefaultItem() {
@@ -133,7 +130,7 @@ export class OrderDetailComponent implements OnInit {
 		return position;
 	}
 
-	selectItemDetail(inputItem, selectedDetail) {
+	selectItemDetail(inputItem?, selectedDetail?) {
 		let tmpHeight = this.halfScreenHeight;
 		let currentHeight = {
 			'profile': tmpHeight,
@@ -174,9 +171,9 @@ export class OrderDetailComponent implements OnInit {
 
 	dismissSoftKeybaord() {
 		if (isIOS) {
-			frame.topmost().nativeView.endEditing(true);
+			Frame.topmost().nativeView.endEditing(true);
 		} else {
-			utils.ad.dismissSoftInput();
+			Utils.ad.dismissSoftInput();
 		}
 	}
 

@@ -1,8 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { Page } from "ui/page";
-import { RouterExtensions } from "nativescript-angular/router";
-import { isIOS } from "platform";
-import * as dialogs from "tns-core-modules/ui/dialogs";
+import { RouterExtensions } from "@nativescript/angular";
+import { Page, Dialogs, isIOS } from '@nativescript/core';
 
 import { ContactService, OrderService, Order, Item } from "./../services";
 
@@ -31,7 +29,7 @@ export class OrderListComponent implements OnInit {
 	}
 
 	selectItem(orderTaker: number, item: Item) {
-		dialogs.action({
+		Dialogs.action({
 			message: `${item.name} (${item.quantity})`,
 			cancelButtonText: "Cancel",
 			actions: ["Edit item", "Remove item"]
@@ -61,7 +59,7 @@ export class OrderListComponent implements OnInit {
 		this.order.removeOrder(orderId);
 	}
 
-	createAndUpdate(orderTaker: number, item: Item) {
+	createAndUpdate(orderTaker?: number, item?: Item) {
 		let queryParams = {
 			orderTaker,
 			item: JSON.stringify(item)

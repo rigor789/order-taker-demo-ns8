@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { Page } from "ui/page";
-import { RouterExtensions } from "nativescript-angular/router";
+import { Page } from "@nativescript/core";
+import { RouterExtensions } from "@nativescript/angular";
 
 @Component({
 	selector: "Home",
