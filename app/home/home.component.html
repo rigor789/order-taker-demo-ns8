@@ -1,0 +1,33 @@
+<GridLayout rows="auto, *" class="intro">
+    <GridLayout class="m-t-30">
+        <StackLayout class="order" [class.order-slide-in]="opening"
+            [class.order-slide-out]="!opening">
+            <Label class="header" text="ORDER"></Label>
+        </StackLayout>
+        <StackLayout class="taker" [class.taker-slide-in]="opening"
+            [class.taker-slide-out]="!opening">
+            <Label class="header" text="TAKER"></Label>
+        </StackLayout>
+    </GridLayout>
+
+    <AbsoluteLayout class="welcome text-center" rowSpan="2">
+        <StackLayout class="overlay center">
+            <Stacklayout class="m-x-15" [class.overlay-zoom-in]="opening"
+                [class.overlay-zoom-out]="!opening"></Stacklayout>
+        </StackLayout>
+        <StackLayout class="center details">
+            <StackLayout orientation="horizontal" horizontalAlignment="center">
+                <Label text="Welcome" class="title text-center m-r-5"></Label>
+                <Image src="~/assets/happy.png" class="happy"></Image>
+            </StackLayout>
+            <Label text="Easy bill split with your friends" class="sub-title text-center m-t-20"></Label>
+
+            <GridLayout class="btn-container">
+                <Button [class.fade-out]="!opening" text="CREATE AN ORDER"
+                    class="m-x-15 welcome-btn" (tap)="newOrder()"></Button>
+                <Image [class.fade-out]="!opening" src="~/assets/plus.png"></Image>
+            </GridLayout>
+        </StackLayout>
+
+    </AbsoluteLayout>
+</GridLayout>

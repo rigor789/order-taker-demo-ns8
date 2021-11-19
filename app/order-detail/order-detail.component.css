@@ -1,0 +1,182 @@
+.close-btn {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+	vertical-align: center;
+	height: 100%;
+}
+
+.close-btn Image {
+	width: 12;
+	height: 12;
+	padding: 12;
+}
+
+.item-details {
+	horizontal-align: center;
+	vertical-align: bottom;
+}
+
+.title {
+	font-weight: bold;
+	font-size: 28;
+	color: #FF7761;
+	text-align: center;
+}
+
+.sub-title {
+	opacity: 0.5;
+	font-size: 16;
+	color: #4A535D;
+	text-align: center;
+	font-family: "Dosis"
+}
+
+.item-detail {
+	width: 100%;
+	horizontal-align: center;
+}
+
+.deselected {
+	animation-duration: 0.3;
+	animation-timing-function: ease;
+	animation-name: reduce;
+	transform: scale(0.8, 0.8)
+}
+
+.selected {
+	animation-duration: 0.3;
+	animation-timing-function: ease;
+	animation-name: enlarge;
+}
+
+@keyframes enlarge {
+	from { transform: scale(0.8, 0.8) }
+	to { transform: scale(1, 1) }
+}
+
+@keyframes reduce {
+	from { transform: scale(1, 1) }
+	to { transform: scale(0.8, 0.8) }
+}
+
+.item-detail TextField {
+	border-bottom-color: #FF7761;
+	border-bottom-width: 2;	
+	text-align: center;
+	color: #FF7761;
+	placeholder-color: #FF7761;
+	padding: 0;
+}
+
+.item-detail .item-name {
+	width: 200;
+}
+
+.item-detail .quantity {
+	width: 50;	
+}
+
+.item-detail .price {
+	width: 70;
+}
+
+.input-group {
+	horizontal-align: center;
+	vertical-align: bottom;
+}
+
+.input-group StackLayout {
+	opacity: 0.75;
+	font-size: 15;
+	color: #4A535D;
+	vertical-align: bottom;
+}
+
+.units Label, .currency Label {
+	font-weight: 500;
+}
+
+.units {
+	margin-left: 80;
+}
+
+.currency {
+	margin-left: 90;
+	font-weight: 500;
+}
+
+.btn-container {
+	height: 60;
+	vertical-align: center;
+	border-radius: 6;
+}
+
+.btn-container Image {
+	width: 20;
+	height: 14;
+	margin-left: 120;
+	animation-duration: 0.5;
+	animation-timing-function: ease;  
+	animation-name: fade-in;
+}
+
+
+Button {
+	height: 60;
+	border-radius: 6;
+	font-size: 16;
+	font-weight: bold;
+	letter-spacing: 0.05;
+}
+
+.save-order, .new-item {
+	animation-duration: 0.5;
+	animation-timing-function: ease;  
+	animation-name: fade-in;
+	border-radius: 6;
+}
+
+.save-order {
+	color: #FFFFFF;
+	background-color: #FF7761;
+}
+
+.new-item {
+	background-color: #FFFFFF;
+	color: #FF7761;
+	border-width: 1;
+	border-color: #FF7761;
+}
+
+.person-selector-container {
+	height: 80;
+	width: 100%;
+	horizontal-align: center;
+	vertical-align: top;
+}
+
+.overlay {
+	background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 100%,rgba(255,255,255,1) 102%);
+}
+
+.person-selector-container .selector {
+	width: 46;
+	height: 46;
+	border-color: #FF7761;
+	border-width: 2;
+	border-radius: 46;
+}
+
+.unselected-overlay {
+	background: linear-gradient(to bottom, rgba(255,255,255,0.80) 0%,rgba(255,255,255,0.80) 3%,rgba(255,255,255,0.73) 50%,rgba(255,255,255,0.6) 99%,rgba(255,255,255,0.6) 100%);
+}
+
+.person, .selected-item {
+	font-weight: 600;
+}
+
+@keyframes fade-in {
+	from { transform: scale(0, 0); opacity: 0 }
+	to { transform: scale(1, 1); opacity: 1 }
+}

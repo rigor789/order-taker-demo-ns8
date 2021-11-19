@@ -1,0 +1,152 @@
+.intro {
+	background-color: #FF7761;
+}
+
+.header {
+	color: #FFFFFF;
+	letter-spacing: 0.05;
+	text-align: center;
+	font-weight: bold;
+}
+
+.happy {
+	width: 18;
+	height: 18;
+	margin-top: 3;
+}
+
+.order {
+	font-size: 85;
+	margin-right: 70;
+}
+.taker {
+	font-size: 90;
+	opacity: 0.6;
+	margin-top: 40;
+	margin-left: 70;
+}
+
+.welcome {
+	vertical-align: center;
+	color: #FFFFFF;
+	width: 100%;
+	height: 100%;
+}
+
+.welcome .title {
+	font-size: 25;
+	font-weight: bold;
+}
+
+.welcome .sub-title {
+	font-size: 17;
+	opacity: 0.75;
+	font-weight: 500;
+}
+
+.btn-container {
+	height: 75;
+	vertical-align: center;
+	margin-top: 55;
+}
+
+.btn-container Image {
+	width: 8;
+	height: 8;
+	margin-left: 160;
+}
+
+.welcome-btn {
+	height: 70;
+	border-radius: 6;
+	color: #FF7761;
+	font-size: 16;
+	font-weight: bold;
+	letter-spacing: 0.05;
+	vertical-align: middle;
+}
+
+.overlay StackLayout {
+	height: 70;
+	border-radius: 6;
+	margin-top: 125;
+	background-color: #FFFFFF;
+}
+
+.overlay-zoom-out {
+	animation-duration: 0.5;
+	animation-timing-function: ease;
+  	animation-name: overlay-zoom-out;
+}
+
+.overlay-zoom-in {
+	animation-duration: 0.5;
+	animation-timing-function: ease;
+  	animation-name: overlay-zoom-in;
+}
+
+.order-slide-in {
+	animation-duration: 0.5;
+	animation-timing-function: ease;
+	animation-name: order-slide-in;
+}
+
+.order-slide-out {
+	animation-duration: 0.5;
+	animation-timing-function: ease;  
+	animation-name: order-slide-out;
+}
+
+.taker-slide-in {
+	animation-duration: 0.5;
+	animation-timing-function: ease;  
+	animation-name: taker-slide-in;
+}
+
+.taker-slide-out {
+	animation-duration: 0.5;
+	animation-timing-function: ease;  
+	animation-name: taker-slide-out;
+}
+
+.fade-out {
+	animation-duration: 0.8;
+	animation-timing-function: ease;  
+	animation-name: fade-out;
+}
+
+@keyframes overlay-zoom-in {
+  0% { transform: scale(20, 20) }
+  100% { transform: scale(1, 1) }
+}
+
+@keyframes overlay-zoom-out {
+  0% { transform: scale(1, 1) }
+  100% { transform: scale(20, 20) }
+}
+
+@keyframes order-slide-in {
+  0% { transform: translate(-500, 0) }
+  100% { transform: translate(0, 0) }
+}
+
+@keyframes order-slide-out {
+  0% { transform: translate(0, 0) }
+  100% { transform: translate(-500, 0) }
+}
+
+@keyframes taker-slide-in {
+  0% { transform: translate(500, 0) }
+  100% { transform: translate(0, 0) }
+}
+
+@keyframes taker-slide-out {
+  0% { transform: translate(0, 0) }
+  100% { transform: translate(500, 0) }
+}
+
+
+@keyframes fade-out {
+  0% { opacity: 1 }
+  100% { opacity: 0 }
+}

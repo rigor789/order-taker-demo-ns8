@@ -1,0 +1,111 @@
+<GridLayout rows="50, *" class="main-container">
+    <AbsoluteLayout row="1">
+        <StackLayout width="100%" #container>
+            <GridLayout rows="auto, auto" columns="*" class="item-detail"
+                (tap)="setActiveInput('profile')" height="150">
+                <StackLayout [ngClass]="{'deselected': !isSelected('profile') }">
+                    <Label class="title" [text]="getSelectedPerson()"></Label>
+                    <Label class="sub-title" text="Select the person for this order"></Label>
+                    <AbsoluteLayout class="m-t-10">
+                        <StackLayout paddingTop="2" orientation="horizontal"
+                            [translateX]="defaultPersonX" hight="60"
+                            #personsContainer>
+                            <Avatar *ngFor="let person of persons" [person]="person"></Avatar>
+                        </StackLayout>
+                        <StackLayout class="center person-selector-container"
+                            [class.overlay]="isSelected('profile')" (pan)="onPanEvent($event, personsContainer)">
+                            <StackLayout class="selector"></StackLayout>
+                        </StackLayout>
+                    </AbsoluteLayout>
+                </StackLayout>
+                <StackLayout rowSpan="2" *ngIf="currentDetailType !== 'profile'"
+                    class="unselected-overlay"></StackLayout>
+            </GridLayout>
+
+            <GridLayout rows="auto, auto, auto" class="item-detail" (tap)="selectItemDetail(name, 'name')"
+                [ngClass]="{'selected': isSelected('name'), 'deselected': !isSelected('name') }"
+                height="100">
+                <Label row="0" class="title" text="ITEM"></Label>
+                <Label row="1" class="sub-title">
+                    <FormattedString>
+                        <Span text="Type what "></Span>
+                        <Span class="person" [text]="getSelectedPerson()"></Span>
+                        <Span text=" will order?"></Span>
+                    </FormattedString>
+                </Label>
+                <TextField class="item-name" row="2" [(ngModel)]='item.name'
+                    returnKeyType="next" #name (returnPress)="selectItemDetail(qty)"
+                    (focus)="selectItemDetail(name, 'name')" autocorrect="false"
+                    autocapitalizationType="none"></TextField>
+                <StackLayout rowSpan="3" *ngIf="currentDetailType !== 'name'"
+                    class="unselected-overlay"></StackLayout>
+            </GridLayout>
+
+            <GridLayout rows="auto, auto, auto" class="item-detail" (tap)="selectItemDetail(qty, 'quantity')"
+                [ngClass]="{'selected': isSelected('quantity'), 'deselected': !isSelected('quantity') }"
+                height="100">
+                <Label row="0" colSpan="2" class="title" text="QUANTITY"></Label>
+                <Label row="1" colSpan="2" class="sub-title">
+                    <FormattedString>
+                        <Span text="How many "></Span>
+                        <Span class="selected-item" [text]="(item.name || 'item')"></Span>
+                        <Span text=" will be ordered?"></Span>
+                    </FormattedString>
+                </Label>
+                <GridLayout row="2" class="input-group">
+                    <TextField class="quantity" [(ngModel)]='item.quantity'
+                        keyboardType="phone" returnKeyType="next" #qty
+                        (returnPress)="selectItemDetail(price)" (focus)="selectItemDetail(qty, 'quantity')"
+                        autocorrect="false" autocapitalizationType="none"></TextField>
+                    <StackLayout class="units">
+                        <Label text="units"></Label>
+                    </StackLayout>
+                </GridLayout>
+                <StackLayout rowSpan="3" *ngIf="currentDetailType !== 'quantity'"
+                    class="unselected-overlay"></StackLayout>
+            </GridLayout>
+
+            <GridLayout rows="auto, auto, auto" class="item-detail" (tap)="selectItemDetail(price, 'price')"
+                [ngClass]="{'selected': isSelected('price'), 'deselected': !isSelected('price') }"
+                height="100">
+                <Label row="0" class="title" text="PRICE"></Label>
+                <Label row="1" class="sub-title">
+                    <FormattedString>
+                        <Span text="How much each "></Span>
+                        <Span class="selected-item" [text]="(item.name || 'item')"></Span>
+                        <Span text=" costs?"></Span>
+                    </FormattedString>
+                </Label>
+                <GridLayout row="2" class="input-group">
+                    <TextField class="price" [(ngModel)]='item.price'
+                        keyboardType="phone" returnKeyType="next" #price
+                        (focus)="selectItemDetail(price, 'price')"
+                        autocorrect="false" autocapitalizationType="none"></TextField>
+                    <StackLayout class="currency">
+                        <Label text="kr."></Label>
+                    </StackLayout>
+                </GridLayout>
+                <StackLayout rowSpan="3" *ngIf="currentDetailType !== 'price'"
+                    class="unselected-overlay"></StackLayout>
+            </GridLayout>
+
+            <StackLayout *ngIf="currentDetailType === 'price'">
+                <GridLayout class="m-x-15 m-y-5 save-order btn-container save">
+                    <Button text="SAVE ORDER" (tap)="saveOrder(item)"></Button>
+                    <Image [class.fade-out]="!opening" src="~/assets/nightlight.png"></Image>
+                </GridLayout>
+                <GridLayout class="btn-container new-item m-x-15 m-t-5 m-b-15">
+                    <Button text="ADD ANOTHER ITEM" (tap)="newItem(item)"></Button>
+                </GridLayout>
+            </StackLayout>
+        </StackLayout>
+    </AbsoluteLayout>
+    <GridLayout class="custom-action-bar" columns="*, 50">
+        <StackLayout class="center" colSpan="2">
+            <Label class="text-center" text="Create an Order"></Label>
+        </StackLayout>
+        <StackLayout col="1" class="close-btn" text="View summary" (tap)="close()">
+            <Image [src]="'~/assets/close.png'"></Image>
+        </StackLayout>
+    </GridLayout>
+</GridLayout>

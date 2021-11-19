@@ -1,0 +1,110 @@
+.close-btn {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+	vertical-align: center;
+	height: 100%;
+}
+
+.close-btn Image {
+	width: 12;
+	height: 12;
+	padding: 12;
+}
+
+.order-taker {
+    font-size: 18;
+    color: #FF7761;
+    font-weight: bold;;
+}
+
+.order-details {
+    vertical-align: top;
+}
+
+.items, .sub-total {
+    opacity: 0.8;
+    font-size: 16;
+    color: #4A535D;
+    letter-spacing: 0.027;
+    font-weight: normal;
+}
+
+.item-name {
+    font-weight: 500;
+    color: #4A535D;
+}
+
+.item-price {
+    font-weight: 400;
+}
+
+.item-quantity {
+    font-weight: 600;
+    color: #A4A9AE;
+}
+
+.btn-container {
+	height: 60;
+	vertical-align: center;
+	background-color: #FF7761;
+	border-radius: 6;
+}
+
+.sub-total Label {
+    font-weight: bold;
+}
+.btn-container Image {
+	width: 8;
+	height: 8;
+	margin-left: 170;
+	animation-duration: 0.5;
+	animation-timing-function: ease;  
+	animation-name: fade-in;
+}
+
+Button {
+	height: 60;
+	border-radius: 6;
+	color: #FFFFFF;
+	font-size: 16;
+	font-weight: bold;
+	letter-spacing: 0.05;
+}
+
+.grand-total-container {
+    opacity: 0.8;
+    font-weight: bold;
+    font-size: 18;
+    color: #4A535D;
+    letter-spacing: 0.03;
+    margin-right: 60;
+    margin-left: 60;
+}
+
+.divider {
+    height: 5;
+    opacity: 0.5;
+    background: #D8D8D8;
+}
+
+.update {
+    background-image: url("~/assets/edit.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 16;
+    height: 16;
+}
+
+.remove {
+    background-image: url("~/assets/delete.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 16;
+    height: 16;
+}
+
+@keyframes fade-in {
+	from { transform: scale(0, 0); opacity: 0 }
+	to { transform: scale(1, 1); opacity: 1 }
+}

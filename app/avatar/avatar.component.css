@@ -1,0 +1,23 @@
+.avatar {
+    width: 80;
+}
+
+.photo {
+    border-radius: 42;
+    background-color: #4A535D;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+Label {
+    opacity: 0.75;
+    font-weight: 500;
+    font-size: 14;
+    color: #4A535D;
+    text-align: center;
+}
+
+.last-name {
+    margin-top: -5; 
+}

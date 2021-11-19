@@ -1,0 +1,52 @@
+<GridLayout rows="50, *, 150" class="main-container">
+    <ListView row="1" [items]="orders" (itemLoading)="onItemLoading($event)">
+        <ng-template let-order="item">
+            <GridLayout rows="auto, auto, auto, auto" columns="60, *, 60"
+                class="order-details p-t-20">
+                <Label col="1" class="order-taker" [text]="getContact(order.orderTaker).name.firstName + ' ' + getContact(order.orderTaker).name.lastName"></Label>
+
+                <StackLayout row="1" col="1" colSpan="2" class="items">
+                    <GridLayout columns="auto, *, auto, 60" *ngFor="let item of order.items"
+                        (tap)="selectItem(order.orderTaker, item)">
+                        <Label class="item-name" [text]="item.name" class="item-name"></Label>
+                        <Label col="1" [text]="' (' + item.quantity + ')'"
+                            class="item-quantity"></Label>
+                        <Label col="2" class="item-price" [text]="item.price + ' kr.' "></Label>
+                    </GridLayout>
+                </StackLayout>
+
+                <StackLayout row="2" col="1" class="hr-light m-y-5"></StackLayout>
+
+                <GridLayout row="3" col="1" columns="*, auto" class="sub-total">
+                    <Label text="Total"></Label>
+                    <Label col="1" class="font-weight-bold" [text]="getSubTotal(order) + ' kr.'"></Label>
+                </GridLayout>
+
+                <Avatar [person]="getContact(order.orderTaker)" [displayName]="false"
+                    [width]="36" [height]="36"></Avatar>
+
+            </GridLayout>
+        </ng-template>
+    </ListView>
+
+    <GridLayout row="2" rows="*, auto" class="summary">
+        <GridLayout rows="auto, auto" columns="*, auto" class="grand-total-container m-x-15">
+            <StackLayout colSpan="2" class="divider m-b-10 m-t-5"></StackLayout>
+            <Label row="1" text="Grand Total"></Label>
+            <Label row="1" col="1" [text]="getGrandTotal() + ' kr.'"></Label>
+        </GridLayout>
+        <GridLayout class="m-x-15 m-y-10  btn-container" row="1">
+            <Button text="CREATE AN ORDER" class="add-order" (tap)="createAndUpdate()"></Button>
+            <Image [class.fade-out]="!opening" src="~/assets/plus_white.png"></Image>
+        </GridLayout>
+    </GridLayout>
+
+    <GridLayout class="custom-action-bar" columns="*, 50">
+        <StackLayout class="center" colSpan="2">
+            <Label class="text-center" text="Checkout"></Label>
+        </StackLayout>
+        <StackLayout col="1" class="close-btn" text="View summary" (tap)="close()">
+            <Image [src]="'~/assets/close.png'"></Image>
+        </StackLayout>
+    </GridLayout>
+</GridLayout>
